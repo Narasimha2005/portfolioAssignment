@@ -1,0 +1,131 @@
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #e7dcfc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: #5423a8;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked+.slider {
+  background-color: #5423a8;
+}
+
+input:focus+.slider {
+  box-shadow: 0 0 2px #5423a8;
+}
+
+input:checked+.slider:before {
+  background-color: white;
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+.nav-link{
+  position: relative;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  outline: none;
+  margin-left: 20px;
+}
+
+/* Default Light Theme */
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -2px;
+  width: 0;
+  height: 2px;
+  background-color: #000; /* Light mode underline */
+  transition: width 0.3s ease, left 0.3s ease;
+}
+.active{
+  font-weight: bold;
+}
+/* Dark Theme Override */
+.nav-item.dark-mode a::after {
+  background-color: #fff; /* Dark mode underline */
+}
+
+.nav-link:hover::after, .nav-item button:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+.hover-button {
+  position: relative;
+  display: inline-block;
+  padding: 4px 15px;
+  margin-left: 20px;
+  margin-top: 5px;
+  font-size: 16px;
+  text-align: center;
+  color: white;
+  background-color: #5423a8;
+  border: 0px solid ;
+  border-radius: 20px;
+  cursor: pointer;
+  overflow: hidden;
+  z-index: 1; /* Ensure the text stays above the pseudo-element */
+  text-decoration: none;
+}
+
+.hover-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: #9265e6;
+  transition: left 0.4s ease;
+  z-index: -1; /* Place the pseudo-element behind the text */
+}
+
+.hover-button:hover::before {
+  left: 0;
+}
+
+.hover-button:hover {
+  color: white;
+  border-color: #2980b9;
+}
