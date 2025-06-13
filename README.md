@@ -6,7 +6,7 @@ A responsive single-page portfolio website built for the Web Development Interns
 - CSS Media Queries For Responsiveness and CSS for styling ,Animations
 - Three.js & Spline (for 3D model integration)
 ## Deployment
-- Deployed on: narsimhaportfolio.netlify.com
+- Deployed on: **Netlify** [Link](narsimhaportfolio1.netlify.com)
 - Steps: `npm install`, `netlify deploy`
 ## 3D Integration
 - Method: Three.js
